@@ -13,7 +13,6 @@ public class Frame extends JPanel {
 		
 		label = new JLabel();
 		ImageIcon trazyn = new ImageIcon("trazyn.jpg");
-		ImageIcon chaosMarineImg = new ImageIcon("chaosMarine.g");
 		label.setIcon(trazyn);
 		label.setHorizontalAlignment(JLabel.CENTER);
 		label.setBackground(Color.BLACK);
@@ -30,12 +29,6 @@ public class Frame extends JPanel {
 		ImageIcon image = new ImageIcon("ultraSymbol.png");
 		frame.setIconImage(image.getImage());
 		frame.setVisible(true);
-		
-		if (room == 5) {
-			
-			label.setIcon(chaosMarineImg);
-		}
-		
 	}
 	
 	 private void drawString(Graphics g, String text, int x, int y) {
@@ -66,18 +59,7 @@ public class Frame extends JPanel {
 				+ 	  "entrance. " + '\n'
 				+ 	  '\n' + "Try typing * Where can I go *." + '\n', 10, 30);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	public static void slowPrint(String output) {
 		for (int i = 0; i<output.length(); i++) {

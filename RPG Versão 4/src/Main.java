@@ -1,5 +1,5 @@
 import java.util.*;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import javax.swing.*;
 import java.awt.*;
 
@@ -15,11 +15,20 @@ public class Main {
 		Frame frame = new Frame();
 		Label label = new Label();
 		
+		// Array List (não usado)
+		// A ideia principal era fazer um array com random para gerar nuúmeros e rodar um teste de porcentagem de acerto em combate
+		ArrayList<Object> characters = new ArrayList<Object>();
+		characters.add(new Marine("ok", 20, 20, 20));
+		characters.add("Ultra Marine");
+		characters.add("Necron Warrior");
+		characters.add("Chaos Marine");
+		System.out.println(characters);
+		System.out.println(characters.size());
+				
 		// Cria objetos
 		Marine ultraMarine = new Marine("Ultra Marine", 20, 10, 15);
 		Necron necronWarrior = new Necron("Necron Warrior", 18, 16, 14);
 		ChaosMarine chaosMarine = new ChaosMarine("Chaos Marine", 22, 8, 20);
-		
 		
 		// Imprime com delay
 		slowPrint15("---------------------------------------------------------------------------------" +
@@ -52,10 +61,8 @@ public class Main {
 				+ "location, you've been assigned a new misson: " + '\n'
 				+ "Purge this world of all that stand against the Emperor." + '\n'
 				+ '\n' + "---------------------------------------------------------------------------------" + '\n'
-				+ "You venture deep into one of the abandoned facilities. Something in the corner " + '\n'
-				+ "catches your eye. A machine detailing, the places you can reach from the " + '\n'
-				+ "entrance. " + '\n'
-				+ '\n' + "Try typing * Where can I go *." + '\n');
+				+ '\n' + "To start the game type * Play *, type * Help * if you need any assistance or" + '\n'
+						+ "type * exit * to close the game." + '\n');
 		
 		// "lógica" principal
 		while(true) {
@@ -83,12 +90,12 @@ public class Main {
 			case 4:
 				slowPrint("You are attacked by a chaos space marine!" + '\n');
 				slowPrint(chaosMarine.toString()+ '\n');
-				slowPrint("You hold your ground, escape is not an option for a son of the empero!r" + '\n');
+				slowPrint("You hold your ground, escape is not an option for a son of the emperor" + '\n');
 				Marine.powerSword(ultraMarine, chaosMarine, necronWarrior);
 				break;
 				
 			case 5:
-				// trocar fonte interface gráfica
+				// trocar fonte interface gráfica (se possível)
 				slowPrint('\n' +"Transmission Received"
 						+ '\n' + "---------------------------------------------------------------------------------" + '\n'
 						+ "Ultra Marines here? The imperium found this place earlier than my calculations" + '\n'
@@ -107,16 +114,23 @@ public class Main {
 				
 			case 6:
 				slowPrint("");
-			
 			}
 				
+		try {	
 		// Get player input
 		System.out.println("> ");
-		command = scanner.nextLine();
+		command = scanner.nextLine(); // Poderia ser resolvido caso o commando não fosse .nextLine?
 			
 		// Deal with player input
-		try {
 		switch(command.toLowerCase()) {
+		
+		 	case "play":
+		 		slowPrint("You venture deep into one of the abandoned facilities. Something in the corner " + '\n'
+				+ "catches your eye. A machine detailing, the places you can reach from the " + '\n'
+				+ "entrance. " + '\n'
+				+ "from here you may choose where you will go, try typing * Where can I go *" + '\n');
+		 		break;
+		 		
 
 			case "where can i go":
 				slowPrint("You can go West to the Alpha Labs, to go type. * Go West *  " + '\n'
@@ -147,36 +161,37 @@ public class Main {
 				
 			case "accept":
 			case "ignore":
-				slowPrint('\n' + "As the tought crosses your mind your communications device is flooded by an" + '\n'
-						+ "unkown signal, a necron declaring itself as Trazyn the infinite makes contact." + '\n'	);
+				slowPrint('\n' + "As the thought crosses your mind your communications device is flooded by an" + '\n'
+						+ "unkown signal, a necron declaring itself as Trazyn the Infinite makes contact." + '\n'	);
 				room = 5;
 				break;
-}		
+				
+			case "help":
+				slowPrint('\n' + "How to play: " + '\n'
+						+ "Choices are always displayed with * * " + '\n'
+						+ "Most situations in the game give you two options to choose from, a or b." + '\n'
+						+ "From here you can type:" + '\n'
+						+ "* Where can I go * or * Exit * " + '\n');
+				break;
+				
+			case "exit":
+				slowPrint("Thanks for playing!");
+				System.exit(0);
+				
+				
+			default:
+				slowPrint("Input does not match known command, try again." + '\n');
+			
+		}		
 		
 		}catch (InputMismatchException e) {
-			slowPrint("My bad bruv");
+			slowPrint("Input is mismatched");
 			continue;
 		}
 		
 		
  }	
-} 
-		
-		
-		/*
-		System.out.println();
-		System.out.println('\n' + UltraMarine.toString() + '\n');	 
-		System.out.println(UltraMarine.powerSword());
-		System.out.println('\n' + UltraMarine.toString());
-		
-		System.out.println("---------------------------------------------------------------------------------" + '\n');
-		
-		System.out.println(necronWarrior.toString());
-		System.out.println('\n' + necronWarrior.gaussFlayer());
-		System.out.println(necronWarrior.toString());
-		*/
-		
-	
+} 	
 	
 	// metodos para imprimir com delay
 	public static void slowPrint(String output) {
