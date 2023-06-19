@@ -1,0 +1,32 @@
+---------------------------------------------------------------------------------
+
+ _    _            _                                             ___ _____ _    
+| |  | |          | |                                           /   |  _  | |   
+| |  | | __ _ _ __| |__   __ _ _ __ ___  _ __ ___   ___ _ __   / /| | |/' | | __
+| |/\| |/ _` | '__| '_ \ / _` | '_ ` _ \| '_ ` _ \ / _ \ '__| / /_| |  /| | |/ /
+\  /\  / (_| | |  | | | | (_| | | | | | | | | | | |  __/ |    \___  \ |_/ /   < 
+ \/  \/ \__,_|_|  |_| |_|\__,_|_| |_| |_|_| |_| |_|\___|_|        |_/\___/|_|\_\
+              _____                  _     _ _   _                             
+             |_   _|                (_)   (_) | (_)                            
+               | | _ __   __ _ _   _ _ ___ _| |_ _  ___  _ __                  
+               | || '_ \ / _` | | | | / __| | __| |/ _ \| '_ \                  
+              _| || | | | (_| | |_| | \__ \ | |_| | (_) | | | |              
+              \___/_| |_|\__, |\__,_|_|___/_|\__|_|\___/|_| |_|             
+                            | |                                                 
+                            |_|                                                  
+---------------------------------------------------------------------------------
+It is the 41st Millenium. In the grim darkness of the far future, there is only
+war. The Emperor of Mankind wages a constant battle to protect humanity from the
+horrors of space. On the fringes of the Imperium, alien races lurk and plot, and
+chaos demons leak into our reality from the torment of the warp. All that stands
+in their way are the mighty Space Marines. They are more than mortal. They are
+steel, and they are doom. They are the champions of mankind. And the greatest of
+them all are the Ultramarines...
+You the only survivor of your squad has crash-landed into the world Atalia 
+Minoris, overrun by xenos and chaos. Since you failed to reach your original
+location, you've been assigned a new misson: 
+Purge this world of all that stand against the Emperor.
+---------------------------------------------------------------------------------
+To start the game type * Play * to start playing, type * Help * if you need any 
+assistance on how to play the game, type * Setting * to understand more about 
+characters and the universe or type * Exit * to close the game.
